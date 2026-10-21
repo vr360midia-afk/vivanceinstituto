@@ -1,0 +1,26 @@
+﻿User-agent: *
+Allow: /
+
+# Permitir explicitly bots de IA para GEO (Generative Engine Optimization)
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://www.vivanceinstituto.com/sitemap.xml

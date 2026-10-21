@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0" />
+  <title>Dr. Danilo Marques | Links Oficiais, Instituto Vivance</title>
+  <meta name="description" content="Acesse todos os links oficiais do Dr. Danilo Marques, Médico Nutrólogo no Instituto Vivance em Maceió." />
+  <meta name="theme-color" content="#050505" />
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dr. Danilo Marques | Links Oficiais, Instituto Vivance" />
+  <meta property="og:description" content="Acesse todos os links oficiais do Dr. Danilo Marques, Médico Nutrólogo no Instituto Vivance em Maceió." />
+  <meta property="og:image" content="https://www.vivanceinstituto.com/foto-dr-danilo.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dr. Danilo Marques | Links Oficiais" />
+  <meta name="twitter:description" content="Acesse todos os links oficiais do Dr. Danilo Marques, Médico Nutrólogo no Instituto Vivance em Maceió." />
+  <meta name="twitter:image" content="https://www.vivanceinstituto.com/foto-dr-danilo.webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B94KSDMKDJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B94KSDMKDJ');
+  </script>
+
+  <style>
+    :root {
+      --color-gold: #D8B661;
+      --color-dark: #050505;
+      --color-gray: #1a1a1a;
+      --font-serif: 'Cinzel', serif;
+      --font-sans: 'Montserrat', sans-serif;
+      --font-italic: 'Cormorant Garamond', serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--color-dark);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    .bio-page {
+      max-width: 500px;
+      margin: 0 auto;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 45vh;
+      min-height: 300px;
+      overflow: hidden;
+    }
+
+    .hero__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .hero__gradient {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(5,5,5,1) 100%);
+    }
+
+    .profile-info {
+      text-align: center;
+      padding: 0 2rem;
+      margin-top: -2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-name-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .profile-prefix {
+      font-family: var(--font-italic);
+      font-size: 1.4rem;
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .profile-name {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+
+    .profile-divider {
+      width: 40px;
+      height: 1px;
+      background-color: var(--color-gold);
+      margin: 1.2rem auto;
+    }
+
+    .profile-desc {
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .highlight-gold {
+      color: var(--color-gold);
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .profile-stats {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .profile-stats strong {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--color-gold);
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .profile-stats span {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 0.2rem;
+    }
+
+    .links {
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .link-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(216, 182, 97, 0.2);
+      border-radius: 12px;
+      padding: 1.2rem 1rem;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(216,182,97,0.05) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .link-card:hover {
+      border-color: rgba(216, 182, 97, 0.6);
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .link-card:hover::before {
+      opacity: 1;
+    }
+
+    .link-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .link-subtitle {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      font-weight: 500;
+    }
+
+    .link-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(216,182,97,0.3), transparent);
+      margin: 3rem 0;
+    }
+
+    .logo-vivance {
+      width: 140px;
+      margin: 2rem auto;
+      display: block;
+      opacity: 0.9;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-icon {
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icon:hover {
+      color: var(--color-gold);
+      border-color: var(--color-gold);
+    }
+
+    .footer-name {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--color-gold);
+      margin-bottom: 0.2rem;
+    }
+
+    .footer-role {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-disclaimer {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    /* Pulse animation for main CTA */
+    @keyframes pulse-border {
+      0% { box-shadow: 0 0 0 0 rgba(216, 182, 97, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(216, 182, 97, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(216, 182, 97, 0); }
+    }
+    
+    .link-card.primary {
+      border-color: var(--color-gold);
+      background: rgba(216, 182, 97, 0.05);
+      animation: pulse-border 2s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="bio-page">
+    <section class="hero">
+      <img class="hero__image" src="foto-dr-danilo.webp" alt="Dr. Danilo Marques" loading="eager" onerror="this.src='Vivance%20Instituto_Logomarca%20Dourada.png'; this.style.objectFit='contain'; this.style.padding='2rem';" />
+      <div class="hero__gradient"></div>
+    </section>
+
+    <div class="profile-info">
+      <div class="profile-name-container">
+        <span class="profile-prefix">Dr.</span>
+        <h1 class="profile-name">Danilo Marques</h1>
+      </div>
+      <div class="profile-divider"></div>
+
+      <p class="profile-desc">
+        Especialista em Metabolismo e Longevidade.<br>Construindo saúde com a <span class="highlight-gold">MEDICINA DE PRECISÃO</span>.
+      </p>
+
+      <div class="profile-stats">
+        <strong>CRM 7564 AL</strong>
+        <span>Instituto Vivance</span>
+      </div>
+    </div>
+
+    <section class="links">
+      <a class="link-card primary"
+        href="https://wa.me/5582982120707?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20e%20gostaria%20de%20saber%20mais%20sobre%20Dr.%20Danilo%20Marques."
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">FALE COM A EQUIPE</span>
+          <strong class="link-title">Agendar Consulta</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="https://chat.whatsapp.com/JTb9zWisUXSLbiV1ynJQtK?s=cl&p=i&mlu=4&ilr=4"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">GRUPO NO WHATSAPP</span>
+          <strong class="link-title">Comunidade<br>Exclusiva</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="/saude-intestinal-maceio"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">TRATAMENTO</span>
+          <strong class="link-title">Saúde Intestinal</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="/tratamento-fibromialgia-maceio"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">TRATAMENTO</span>
+          <strong class="link-title">Fibromialgia</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="/envelhecimento-saudavel-maceio"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">TRATAMENTO</span>
+          <strong class="link-title">Envelhecimento<br>Saudável</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="/medicina-integrativa-maceio"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">TRATAMENTO</span>
+          <strong class="link-title">Medicina<br>Integrativa</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="/menopausa-maceio"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">TRATAMENTO</span>
+          <strong class="link-title">Menopausa</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="/tratamento-sobrepeso-maceio"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">TRATAMENTOS</span>
+          <strong class="link-title">Emagrecimento e<br>Sobrepeso</strong>
+        </span>
+      </a>
+
+      <a class="link-card"
+        href="/"
+        target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">SITE OFICIAL</span>
+          <strong class="link-title">Conheça o<br>Instituto Vivance</strong>
+        </span>
+      </a>
+
+      <a class="link-card" href="https://maps.app.goo.gl/Amg3TkgqS7fpn3es8" target="_blank" rel="noopener noreferrer">
+        <span class="link-content">
+          <span class="link-subtitle">COMO CHEGAR</span>
+          <strong class="link-title">Nossa Localização</strong>
+        </span>
+      </a>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <img src="Vivance%20Instituto_Logomarca%20Dourada.png" alt="Instituto Vivance" class="logo-vivance">
+
+    <footer class="footer">
+      <div class="social-links">
+        <a href="https://www.instagram.com/dr.danilomarques/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://wa.me/5582982120707?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20e%20gostaria%20de%20saber%20mais%20sobre%20Dr.%20Danilo%20Marques." target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9l-5.05.9"></path>
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@dr.danilomarques" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-info">
+        <p class="footer-name">Dr. Danilo Marques</p>
+        <p class="footer-role">Médico Nutrólogo &middot; CRM 7564 AL<br>Instituto Vivance, Maceió, AL</p>
+        <p class="footer-disclaimer">As informações deste site possuem caráter educativo.<br>Consulte sempre um médico presencialmente.</p>
+        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 1rem; text-align: center;">Desenvolvido por <a href="https://wa.me/5582993928558?text=Ol%C3%A1%20Vim%20do%20Instagram%20do%20Instituto%20Vivance%20gostaria%20de%20fazer%20o%20meu%20site." target="_blank" style="color: var(--color-gold); text-decoration: none; font-weight: 500;">@tudo.em360</a></p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Rastreamento de cliques nos botões para o Google Analytics
+    const linkCards = document.querySelectorAll('.link-card');
+    linkCards.forEach(link => {
+      link.addEventListener('click', () => {
+        const titleElement = link.querySelector('.link-title');
+        const buttonName = titleElement ? titleElement.innerText.replace(/\n/g, ' ') : 'Botao Desconhecido';
+        
+        if (typeof gtag === 'function') {
+          gtag('event', 'click_botao_linktree', {
+            'button_name': buttonName
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
