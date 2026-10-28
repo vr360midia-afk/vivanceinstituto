@@ -1,46 +1,43 @@
+# ======================================================================
+# .HTACCESS - OTIMIZAÇÃO DE SEO, PERFORMANCE E URLS LIMPAS
+# Instituto Vivance - Dr. Danilo Marques
+# ======================================================================
+
+RewriteEngine On
+RewriteBase /
+
+# 1. REDIRECIONAMENTO CANÔNICO DE /paginas/*.html PARA URL LIMPA NA RAIZ (301)
+RewriteCond %{THE_REQUEST} \s/+paginas/([^.\s?]+)(?:\.html)?[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 2. REDIRECIONA URLS LIMPAS PARA ARQUIVOS NA RAIZ (Ex: /blog -> blog.html, /tratamento-obesidade-maceio -> tratamento-obesidade-maceio.html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# 3. FALLBACK: REDIRECIONA URLS LIMPAS PARA A PASTA /paginas/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/paginas/$1.html -f
+RewriteRule ^([^/]+)/?$ paginas/$1.html [L]
+
+# 4. REDIRECIONA IMAGENS DAS SUBPÁGINAS (Se chamadas da raiz)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/paginas/$1 -f
+RewriteRule ^([^/]+\.(jpg|webp|png))$ paginas/$1 [L]
+
+# 5. CACHE DE NAVEGADOR PARA ALTA VELOCIDADE (Core Web Vitals)
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresByType image/jpg "access 1 year"
-    ExpiresByType image/jpeg "access 1 year"
-    ExpiresByType image/gif "access 1 year"
-    ExpiresByType image/png "access 1 year"
-    ExpiresByType image/webp "access 1 year"
-    ExpiresByType image/svg+xml "access 1 year"
-    ExpiresByType text/html "access 1 hour"
-    ExpiresByType text/css "access 1 year"
-    ExpiresByType text/javascript "access 1 year"
-    ExpiresByType application/javascript "access 1 year"
-    ExpiresByType image/x-icon "access 1 year"
-    ExpiresDefault "access 2 days"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
+# 6. COMPRESSÃO GZIP / BROTLI
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
-</IfModule>
-
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    
-    # Forçar HTTPS
-    RewriteCond %{HTTPS} off
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-    
-    # Evitar loops
-    RewriteCond %{ENV:REDIRECT_STATUS} 200
-    RewriteRule ^ - [L]
-
-    # Roteamento para imagens (jpg/webp) que estão na pasta paginas (usado pelas páginas pilar)
-    RewriteCond %{REQUEST_URI} ^/([a-zA-Z0-9_-]+\.(jpg|webp))$
-    RewriteCond paginas/%1 -f
-    RewriteRule ^([a-zA-Z0-9_-]+\.(jpg|webp))$ paginas/$1 [L]
-    
-    # Tenta servir da pasta 'paginas' primeiro (ex: /tratamento-obesidade-maceio -> paginas/tratamento-obesidade-maceio.html)
-    RewriteCond %{REQUEST_URI} ^/([a-zA-Z0-9_-]+)$
-    RewriteCond paginas/%1.html -f
-    RewriteRule ^([a-zA-Z0-9_-]+)$ paginas/$1.html [L]
-
-    # Caso contrário, tenta servir da raiz (ex: /blog -> blog.html)
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([^\.]+)$ $1.html [NC,L]
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
 </IfModule>

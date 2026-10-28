@@ -5,6 +5,7 @@
     
     <meta name="description" content="Precisa de um médico para emagrecer em Maceió? O Dr. Danilo Marques investiga a raiz metabólica da sua dificuldade de perder peso. Agende sua avaliação clínica.">
     <meta name="keywords" content="emagrecimento, nutrólogo maceió, instituto vivance, dr. danilo marques, obesidade, metabolismo, bioimpedância, calorimetria indireta, maceió">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.vivanceinstituto.com/medico-para-emagrecer-maceio">
 
     <!-- Open Graph -->
@@ -20,11 +21,11 @@
     <meta name="twitter:image" content="https://www.vivanceinstituto.com/consultorio-dr-danilo-marques-maceio.webp">
 
 
-    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="/style.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@300;400;500;600&amp;family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&amp;display=swap">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
     <style>
         .blog-header {
@@ -174,73 +175,117 @@
     
 
     <script type="application/ld+json">
-    [
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Médico para emagrecer em Maceió: qual profissional procurar?",
-    "image": "https://www.vivanceinstituto.com/consultorio-dr-danilo-marques-maceio.webp",
-    "author": {
-      "@type": "Person",
-      "name": "Dr. Danilo Marques",
-      "url": "https://www.vivanceinstituto.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Instituto Vivance",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.vivanceinstituto.com/Vivance%20Instituto_Logomarca%20Dourada.png"
-      }
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalClinic",
+          "@id": "https://www.vivanceinstituto.com/#organization",
+          "name": "Instituto Vivance",
+          "url": "https://www.vivanceinstituto.com/",
+          "logo": "https://www.vivanceinstituto.com/Vivance%20Instituto_Logomarca%20Dourada.png",
+          "telephone": "+55-82-98212-0707",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Olindina Campos Teixeira, 57",
+            "addressLocality": "Maceió",
+            "addressRegion": "AL",
+            "postalCode": "57036-690",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://www.vivanceinstituto.com/#physician",
+          "name": "Dr. Danilo Marques",
+          "url": "https://www.vivanceinstituto.com/",
+          "worksFor": {
+            "@id": "https://www.vivanceinstituto.com/#organization"
+          }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://www.vivanceinstituto.com/medico-para-emagrecer-maceio#webpage",
+          "url": "https://www.vivanceinstituto.com/medico-para-emagrecer-maceio",
+          "name": "Médico Especialista em Emagrecimento em Maceió | Instituto Vivance",
+          "description": "Precisa de um médico para emagrecer em Maceió? O Dr. Danilo Marques investiga a raiz metabólica da sua dificuldade de perder peso. Agende sua avaliação clínica.",
+          "inLanguage": "pt-BR",
+          "author": {
+            "@id": "https://www.vivanceinstituto.com/#physician"
+          },
+          "publisher": {
+            "@id": "https://www.vivanceinstituto.com/#organization"
+          },
+          "breadcrumb": {
+            "@id": "https://www.vivanceinstituto.com/medico-para-emagrecer-maceio#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.vivanceinstituto.com/medico-para-emagrecer-maceio#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Início",
+              "item": "https://www.vivanceinstituto.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Médico para Emagrecer em Maceió",
+              "item": "https://www.vivanceinstituto.com/medico-para-emagrecer-maceio"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.vivanceinstituto.com/medico-para-emagrecer-maceio#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qual médico devo procurar para emagrecer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O médico nutrólogo está entre os especialistas que atuam na avaliação clínica e no tratamento de pacientes com sobrepeso ou obesidade, investigando metabolismo, composição corporal e necessidades nutricionais."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso estar com obesidade para procurar um médico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Pessoas com sobrepeso, alterações de composição corporal ou dificuldade persistente para controlar o peso também podem procurar avaliação médica."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Médico para emagrecer pode receitar medicamentos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, quando houver indicação clínica. A escolha do medicamento depende da avaliação individual e deve considerar benefícios, riscos e contraindicações."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Existe exame para descobrir por que não consigo emagrecer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não existe um único exame capaz de determinar a causa. A investigação é realizada a partir do histórico clínico, exame médico e, quando necessário, exames complementares."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Onde fazer acompanhamento para emagrecimento em Maceió?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O Instituto Vivance oferece acompanhamento médico em Maceió para pacientes que buscam avaliação relacionada ao emagrecimento, composição corporal e saúde metabólica."
+              }
+            }
+          ]
+        }
+      ]
     }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Qual médico devo procurar para emagrecer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nutrólogos e endocrinologistas estão entre os médicos que podem participar da avaliação e do tratamento de pacientes com sobrepeso ou obesidade. A indicação depende das necessidades clínicas de cada pessoa."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Preciso estar com obesidade para procurar um médico?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não. Pessoas com sobrepeso, alterações de composição corporal ou dificuldade persistente para controlar o peso também podem procurar avaliação médica."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Médico para emagrecer pode receitar medicamentos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, quando houver indicação clínica. A escolha do medicamento depende da avaliação individual e deve considerar benefícios, riscos e contraindicações."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Existe exame para descobrir por que não consigo emagrecer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não existe um único exame capaz de determinar a causa. A investigação é realizada a partir do histórico clínico, exame médico e, quando necessário, exames complementares."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Onde fazer acompanhamento para emagrecimento em Maceió?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O Instituto Vivance oferece acompanhamento médico em Maceió para pacientes que buscam avaliação relacionada ao emagrecimento, composição corporal e saúde metabólica."
-        }
-      }
-    ]
-  }
-]
     </script>
 </head>
 <body>
@@ -248,36 +293,36 @@
         <div class="container header-container">
             <div class="logo">
                 <a href="/">
-                    <img src="Vivance%20Instituto_Logomarca%20Dourada.png" alt="Vivance Instituto" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <img src="/Vivance%20Instituto_Logomarca%20Dourada.png" alt="Instituto Vivance - Medicina e Longevidade em Maceió" class="logo-img" width="180" height="45" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 </a>
             </div>
-                                                                                                <nav class="nav-menu">
+            <nav class="nav-menu">
                 <a href="/#sobre">Sobre</a>
                 <div class="dropdown">
                     <a href="/#servicos" class="dropbtn">Serviços <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
                     <div class="dropdown-content">
-                        <a href="/paginas/tratamento-obesidade-maceio.html">Tratamento de Obesidade</a>
-                        <a href="/paginas/menopausa-maceio.html">Tratamento de Menopausa</a>
-                        <a href="/paginas/medicina-integrativa-maceio.html">Medicina Integrativa</a>
-                        <a href="/paginas/envelhecimento-saudavel-maceio.html">Envelhecimento Saudável</a>
-                        <a href="/paginas/saude-intestinal-maceio.html">Saúde Intestinal</a>
-                        <a href="/paginas/tratamento-fibromialgia-maceio.html">Tratamento de Fibromialgia</a>
-                        <a href="/paginas/tratamentos-injetaveis-maceio.html">Tratamentos Injetáveis</a>
-                        <a href="/paginas/bioimpedancia-maceio.html">Bioimpedância Tetrapolar</a>
-                        <a href="/paginas/testes-de-forca-maceio.html">Testes de Força</a>
-                        <a href="/paginas/polissonografia-portatil-maceio.html">Polissonografia Portátil</a>
-                        <a href="/paginas/calorimetria-indireta-maceio.html">Calorimetria Indireta</a>
-                        <a href="/paginas/exame-mineralograma-maceio.html">Mineralograma</a>
-                        <a href="/paginas/teste-intolerancia-alimentar-maceio.html">Teste de Intolerância</a>
-                        <a href="/paginas/exame-microbiota-intestinal-maceio.html">Microbiota Intestinal</a>
-                        <a href="/paginas/teste-genetico-emagrecimento.html">Testes Genéticos</a>
-                        <a href="/paginas/implantes-hormonais-maceio.html">Implantes Hormonais</a>
+                        <a href="/tratamento-obesidade-maceio">Tratamento de Obesidade</a>
+                        <a href="/menopausa-maceio">Tratamento de Menopausa</a>
+                        <a href="/medicina-integrativa-maceio">Medicina Integrativa</a>
+                        <a href="/envelhecimento-saudavel-maceio">Envelhecimento Saudável</a>
+                        <a href="/saude-intestinal-maceio">Saúde Intestinal</a>
+                        <a href="/tratamento-fibromialgia-maceio">Tratamento de Fibromialgia</a>
+                        <a href="/tratamentos-injetaveis-maceio">Tratamentos Injetáveis</a>
+                        <a href="/bioimpedancia-maceio">Bioimpedância Tetrapolar</a>
+                        <a href="/testes-de-forca-maceio">Testes de Força</a>
+                        <a href="/polissonografia-portatil-maceio">Polissonografia Portátil</a>
+                        <a href="/calorimetria-indireta-maceio">Calorimetria Indireta</a>
+                        <a href="/exame-mineralograma-maceio">Mineralograma</a>
+                        <a href="/teste-intolerancia-alimentar-maceio">Teste de Intolerância</a>
+                        <a href="/exame-microbiota-intestinal-maceio">Microbiota Intestinal</a>
+                        <a href="/teste-genetico-emagrecimento">Testes Genéticos</a>
+                        <a href="/implantes-hormonais-maceio">Implantes Hormonais</a>
                     </div>
                 </div>
                 <a href="/#metodologia">Metodologia</a>
                 <a href="/#clinica">A Clínica</a>
                 <a href="/#localizacao">Localização</a>
-                <a href="/blog.html">Blog</a>
+                <a href="/blog">Blog</a>
 
                 <div class="mobile-socials">
                     <a href="https://www.instagram.com/dr.danilomarques/" target="_blank" aria-label="Instagram">
@@ -290,7 +335,7 @@
                 </div>
             </nav>
             <div class="header-cta">
-                <a href="https://wa.me/5582982120707?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20M%C3%A9dico%20Especialista%20em%20Emagrecimento." target="_blank" class="btn btn-gold btn-sm">Agendar Consulta</a>
+                <a href="https://wa.me/5582982120707?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Instituto%20Vivance%20e%20gostaria%20de%20saber%20mais%20sobre%20Emagrecimento." target="_blank" class="btn btn-gold btn-sm" data-whatsapp-service="Emagrecimento">Agendar Consulta</a>
             </div>
             <button class="mobile-toggle" aria-label="Abrir Menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -302,11 +347,11 @@
         <div class="container">
             <span class="eyebrow mono-text" style="color: var(--color-gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Emagrecimento</span>
             <h1 class="serif-title" style="font-size: clamp(2rem, 4vw, 3.5rem); max-width: 800px; margin: 1rem auto; line-height: 1.2;">Médico para Emagrecer: Como um tratamento focado no metabolismo transforma seu corpo</h1>
-            <p style="color: var(--color-dark-gray); font-family: var(--font-sans); font-size: 1.1rem;"><strong>Por Dr. Danilo Marques | Leitura de 5 min</strong></p>
+            <p style="color: var(--color-dark-gray); font-family: var(--font-sans); font-size: 1.1rem;"><strong>Por Dr. Danilo Marques (CRM 7564 AL) | Leitura de 5 min</strong></p>
         </div>
     </div>
 
-    <img src="consultorio-dr-danilo-marques-maceio.webp" alt="Médico para emagrecer em Maceió, Dr. Danilo Marques" class="blog-featured-img">
+    <img src="/consultorio-dr-danilo-marques-maceio.webp" alt="Médico para emagrecer em Maceió, Dr. Danilo Marques" class="blog-featured-img" width="1000" height="500">
 
     <main class="blog-content">
         <p>Se você está procurando um <strong>médico para emagrecer em Maceió</strong>, provavelmente já percebeu que perder peso nem sempre depende apenas de “comer menos e se exercitar mais”.</p>
@@ -437,7 +482,7 @@
 
         <div class="cta-box">
             <h3 class="serif-title">Procurando médico para emagrecer em Maceió?</h3>
-            <a href="https://wa.me/5582982120707?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20M%C3%A9dico%20Especialista%20em%20Emagrecimento." target="_blank" class="btn btn-gold">Agendar Consulta</a>
+            <a href="https://wa.me/5582982120707?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Instituto%20Vivance%20e%20gostaria%20de%20saber%20mais%20sobre%20Emagrecimento." target="_blank" class="btn btn-gold" data-whatsapp-service="Emagrecimento">Agendar Consulta</a>
             <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.5; margin-bottom: 0;"><em>*Este conteúdo possui caráter educativo e não substitui consulta, diagnóstico ou tratamento médico individualizado.</em></p>
         </div>
     </main>
@@ -464,7 +509,7 @@
                     CEP 57036-690
                 </p>
                 <p style="margin: 0; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
-                    WhatsApp: <a href="https://wa.me/5582982120707?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20M%C3%A9dico%20Especialista%20em%20Emagrecimento." style="color: var(--color-white); text-decoration: none; font-weight: 400; transition: color 0.3s;" onmouseover="this.style.color='var(--color-gold)'" onmouseout="this.style.color='var(--color-white)'">(82) 98212-0707</a>
+                    WhatsApp: <a href="https://wa.me/5582982120707?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Instituto%20Vivance%20e%20gostaria%20de%20saber%20mais%20sobre%20Emagrecimento." style="color: var(--color-white); text-decoration: none; font-weight: 400; transition: color 0.3s;" onmouseover="this.style.color='var(--color-gold)'" onmouseout="this.style.color='var(--color-white)'" data-whatsapp-service="Emagrecimento">(82) 98212-0707</a>
                 </p>
             </div>
 
@@ -497,7 +542,32 @@
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5582982120707?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Instituto%20Vivance%20e%20gostaria%20de%20saber%20mais%20sobre%20Emagrecimento." target="_blank" class="floating-whatsapp" aria-label="Agendar consulta pelo WhatsApp" data-whatsapp-service="Emagrecimento">
+        <svg viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.625.846 5.059 2.284 7.033l-1.492 5.448 5.602-1.469c1.911 1.258 4.195 1.988 6.606 1.988 6.627 0 12-5.373 12-12s-5.373-12-12-12z"></path>
+        </svg>
+    </a>
+
     <script src="/script.js" defer=""></script>
-
-
+    <script>
+        let gaLoaded = false;
+        function loadGA() {
+            if (gaLoaded) return;
+            gaLoaded = true;
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B94KSDMKDJ';
+            script.async = true;
+            document.head.appendChild(script);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-B94KSDMKDJ');
+        }
+        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(evt => 
+            window.addEventListener(evt, loadGA, {once: true, passive: true})
+        );
+        setTimeout(loadGA, 4000);
+    </script>
 </body></html>

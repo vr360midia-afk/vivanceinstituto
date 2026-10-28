@@ -261,4 +261,161 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 7. Centralização do WhatsApp Personalizado por Serviço e Rastreamento (whatsapp_click)
+    const VIVANCE_WA_NUMBER = '5582982120707';
+    const VIVANCE_WA_BASE = 'https://wa.me/' + VIVANCE_WA_NUMBER;
+    const VIVANCE_DEFAULT_MSG = 'Olá! Vim pelo site do Instituto Vivance e gostaria de agendar uma avaliação.';
+
+    // Mapeamento explícito entre páginas e serviços oficiais confirmados
+    const PAGE_SERVICE_MAP = {
+        '/emagrecimento-maceio': 'Emagrecimento',
+        '/clinica-emagrecimento-maceio': 'Emagrecimento',
+        '/medico-para-emagrecer-maceio': 'Emagrecimento',
+        '/artigo-emagrecimento-maceio': 'Emagrecimento',
+        '/artigo-ozempic-maceio': 'Emagrecimento',
+        '/tratamento-obesidade-maceio': 'Tratamento da Obesidade',
+        '/tratamento-sobrepeso-maceio': 'Tratamento do Sobrepeso',
+        '/bioimpedancia-maceio': 'Bioimpedância',
+        '/artigo-bioimpedancia-maceio': 'Bioimpedância',
+        '/menopausa-maceio': 'Tratamento da Menopausa',
+        '/artigo-menopausa-emagrecimento': 'Tratamento da Menopausa',
+        '/saude-intestinal-maceio': 'Saúde Intestinal',
+        '/envelhecimento-saudavel-maceio': 'Longevidade',
+        '/nutrologo-maceio': 'Nutrologia',
+        '/medicina-integrativa-maceio': 'Medicina Integrativa',
+        '/tratamento-fibromialgia-maceio': 'Tratamento de Fibromialgia',
+        '/tratamentos-injetaveis-maceio': 'Tratamentos Injetáveis',
+        '/artigo-soroterapia-implantes': 'Implantes Hormonais e Tratamentos Injetáveis',
+        '/testes-de-forca-maceio': 'Testes de Força',
+        '/polissonografia-portatil-maceio': 'Polissonografia Portátil',
+        '/calorimetria-indireta-maceio': 'Calorimetria Indireta',
+        '/exame-mineralograma-maceio': 'Mineralograma',
+        '/teste-intolerancia-alimentar-maceio': 'Teste de Intolerância Alimentar',
+        '/exame-microbiota-intestinal-maceio': 'Exame de Microbiota Intestinal',
+        '/teste-genetico-emagrecimento': 'Teste Genético',
+        '/implantes-hormonais-maceio': 'Implantes Hormonais'
+    };
+
+    function normalizePagePath(rawPath) {
+        if (!rawPath) return '/';
+        let p = rawPath.toLowerCase().trim();
+        p = p.replace(/^\/paginas\//, '/');
+        p = p.replace(/\.html$/, '');
+        p = p.replace(/\/+$/, '');
+        if (p === '' || p === '/index') return '/';
+        return p.startsWith('/') ? p : '/' + p;
+    }
+
+    function encodeWhatsAppText(text) {
+        return encodeURIComponent(text).replace(/!/g, '%21');
+    }
+
+    function getVivanceServiceForElement(el) {
+        // Prioridade 1: Serviço explicitamente associado ao botão
+        if (el && el.getAttribute) {
+            const explicitService = el.getAttribute('data-whatsapp-service');
+            if (explicitService && explicitService.trim() !== '') {
+                return explicitService.trim();
+            }
+        }
+        // Prioridade 2: Serviço associado à página atual via mapeamento explícito
+        const currentPath = normalizePagePath(window.location.pathname);
+        if (Object.prototype.hasOwnProperty.call(PAGE_SERVICE_MAP, currentPath)) {
+            return PAGE_SERVICE_MAP[currentPath];
+        }
+        // Prioridade 3: Nenhum serviço específico (usa mensagem padrão)
+        return null;
+    }
+
+    function buildVivanceWhatsAppUrl(el) {
+        const service = getVivanceServiceForElement(el);
+        const message = service
+            ? 'Olá! Vim pelo site do Instituto Vivance e gostaria de saber mais sobre ' + service + '.'
+            : VIVANCE_DEFAULT_MSG;
+        return VIVANCE_WA_BASE + '?text=' + encodeWhatsAppText(message);
+    }
+
+    function detectSiteSection(el) {
+        if (!el) return 'geral';
+        const explicitSection = el.getAttribute('data-whatsapp-section');
+        if (explicitSection) return explicitSection;
+        if (el.classList.contains('floating-whatsapp')) return 'floating_button';
+        if (el.closest('header, .header')) return 'header';
+        if (el.closest('.hero, #inicio')) return 'hero';
+        if (el.closest('#servicos')) return 'servicos';
+        if (el.closest('#metodologia')) return 'metodologia';
+        if (el.closest('#sobre')) return 'sobre';
+        if (el.closest('#localizacao')) return 'localizacao';
+        if (el.closest('#faq, .faq-section')) return 'faq';
+        if (el.closest('.cta-box')) return 'article_cta';
+        if (el.closest('article, .blog-content, main')) return 'main_content';
+        if (el.closest('footer, .footer')) return 'footer';
+        return 'geral';
+    }
+
+    function detectButtonId(el, index) {
+        if (!el) return 'wa_btn_' + index;
+        const explicitId = el.getAttribute('data-whatsapp-id') || el.id;
+        if (explicitId) return explicitId;
+        if (el.classList.contains('floating-whatsapp')) return 'wa_floating';
+        const section = detectSiteSection(el);
+        return 'wa_' + section + '_' + (index + 1);
+    }
+
+    function trackWhatsAppClick(el, index) {
+        try {
+            if (typeof window.loadGA === 'function') {
+                window.loadGA();
+            }
+            const originPage = normalizePagePath(window.location.pathname);
+            const siteSection = detectSiteSection(el);
+            const buttonId = detectButtonId(el, index);
+
+            // Parâmetros estritamente não sensíveis (sem enviar interesse médico, mensagem ou dados pessoais)
+            const eventParams = {
+                origin_page: originPage,
+                button_id: buttonId,
+                site_section: siteSection
+            };
+
+            window.dataLayer = window.dataLayer || [];
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'whatsapp_click', eventParams);
+            } else {
+                window.dataLayer.push(Object.assign({ event: 'whatsapp_click' }, eventParams));
+            }
+        } catch (err) {
+            // Silencioso para nunca interromper a navegação ao WhatsApp
+        }
+    }
+
+    // Aplica URL personalizada e rastreamento em todos os botões oficiais de WhatsApp da clínica
+    const allLinks = document.querySelectorAll('a[href*="wa.me/"]');
+    allLinks.forEach((link, idx) => {
+        const rawHref = link.getAttribute('href') || '';
+        // Preserva intocados contatos legítimos de terceiros (ex: crédito do desenvolvedor no rodapé)
+        if (!rawHref.includes(VIVANCE_WA_NUMBER) && !rawHref.includes('98773')) {
+            return;
+        }
+        const personalizedUrl = buildVivanceWhatsAppUrl(link);
+        link.setAttribute('href', personalizedUrl);
+
+        if (!link.getAttribute('data-whatsapp-section')) {
+            link.setAttribute('data-whatsapp-section', detectSiteSection(link));
+        }
+        if (!link.getAttribute('data-whatsapp-id')) {
+            link.setAttribute('data-whatsapp-id', detectButtonId(link, idx));
+        }
+
+        link.addEventListener('click', function () {
+            trackWhatsAppClick(link, idx);
+        });
+    });
+
+    // Expõe utilitário centralizado caso necessário em novos componentes
+    window.VivanceWhatsApp = {
+        getUrl: buildVivanceWhatsAppUrl,
+        getService: getVivanceServiceForElement
+    };
 });

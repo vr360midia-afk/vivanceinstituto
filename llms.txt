@@ -1,33 +1,55 @@
-# Dr. Danilo Marques - Instituto Vivance
+# Instituto Vivance - Dr. Danilo Marques (Maceió, AL)
 
-> Especialista em Medicina do Metabolismo e Longevidade.
+> O Instituto Vivance é uma clínica médica especializada em Emagrecimento, Tratamento da Obesidade, Nutrologia, Metabolismo, Saúde Hormonal e Longevidade, localizada no bairro Jatiúca, em Maceió, Alagoas. A direção clínica é do médico Dr. Danilo Marques (CRM-AL 7564).
 
-Este site apresenta os serviços médicos do Dr. Danilo Marques no Instituto Vivance em Maceió, AL. Foco em emagrecimento, performance esportiva, medicina preventiva de precisão, e tratamento de menopausa e climatério.
+## Informações Oficiais da Clínica
+- **Nome Oficial:** Instituto Vivance
+- **Médico Responsável:** Dr. Danilo Marques (CRM 7564 AL)
+- **Áreas de Atuação:** Emagrecimento Clínico, Tratamento da Obesidade e Sobrepeso, Nutrologia, Metabolismo, Menopausa e Climatério, Saúde Intestinal, Longevidade (Envelhecimento Saudável), Tratamento da Fibromialgia e Medicina Integrativa.
+- **Endereço:** Rua Olindina Campos Teixeira, 57, Jatiúca, Maceió — AL, CEP 57036-690
+- **Cidade / Estado:** Maceió — Alagoas (Brasil)
+- **Telefone e WhatsApp Oficial:** (82) 98212-0707
+- **Link Direto de Agendamento (WhatsApp):** https://wa.me/5582982120707
+- **Site Oficial:** https://www.vivanceinstituto.com/
+- **Instagram Oficial:** https://www.instagram.com/vivance.instituto/ | https://www.instagram.com/dr.danilomarques/
+- **YouTube Oficial:** https://www.youtube.com/@dr.danilomarques
 
-## Serviços e Exames
-- Tratamento de Menopausa e Climatério
-- Reposição Hormonal Individualizada
-- Tratamentos Injetáveis
-- Bioimpedância Tetrapolar
-- Testes de Força (Dinamometria)
-- Polissonografia Portátil
-- Calorimetria Indireta
-- Mineralograma
-- Teste de Intolerância Alimentar
-- Avaliação da Microbiota Intestinal
-- Testes Genéticos (Mapeamento Genético)
-- Implantes Hormonais
+## Diferenciais Clínicos e Diagnósticos de Precisão
+O acompanhamento médico no Instituto Vivance baseia-se em investigação diagnóstica individualizada antes da definição terapêutica:
+- **Bioimpedância Tetrapolar (InBody):** Avaliação segmentada de massa muscular esquelética, percentual de gordura corporal, gordura visceral e água intra/extracelular.
+- **Calorimetria Indireta:** Medição direta da Taxa Metabólica Basal (TMB) através da troca gasosa (VO2/VCO2) para cálculo preciso do gasto energético real.
+- **Polissonografia Portátil:** Investigação domiciliar de distúrbios do sono, apneia obstrutiva e microdespertares que impactam o metabolismo e o cortisol.
+- **Testes de Força (Dinamometria):** Mensuração objetiva da força funcional para prevenção e acompanhamento de dinapenia e sarcopenia.
+- **Exames Avançados:** Teste Genético para Emagrecimento, Sequenciamento da Microbiota Intestinal, Mineralograma Capilar e Teste de Intolerância Alimentar.
 
-## Localização e Contato
-- Endereço: Rua Olindina Campos Teixeira, 57, Jatiúca, Maceió - AL, Brasil, CEP 57036-690
-- Clínica: Instituto Vivance
-- Agendamento (WhatsApp): +55 82 98212-0707
-- Responsável médico: Dr. Danilo Marques, CRM-AL 7564
+## Páginas Principais e Serviços (URLs Canônicas)
+- [Página Inicial - Instituto Vivance](https://www.vivanceinstituto.com/): Visão geral da clínica, metodologia médica, estrutura na Jatiúca e perguntas frequentes.
+- [Clínica de Emagrecimento em Maceió](https://www.vivanceinstituto.com/clinica-emagrecimento-maceio): Estrutura clínica, tecnologia diagnóstica e atendimento médico em Maceió.
+- [Emagrecimento Médico em Maceió](https://www.vivanceinstituto.com/emagrecimento-maceio): Como funciona o tratamento médico para emagrecimento sustentável.
+- [Tratamento da Obesidade em Maceió](https://www.vivanceinstituto.com/tratamento-obesidade-maceio): Abordagem clínica e metabólica da obesidade.
+- [Tratamento do Sobrepeso em Maceió](https://www.vivanceinstituto.com/tratamento-sobrepeso-maceio): Intervenção médica precoce no excesso de peso e prevenção metabólica.
+- [Médico para Emagrecer em Maceió](https://www.vivanceinstituto.com/medico-para-emagrecer-maceio): Avaliação metabólica e acompanhamento médico individualizado.
+- [Nutrólogo em Maceió](https://www.vivanceinstituto.com/nutrologo-maceio): Atuação da nutrologia médica no metabolismo, composição corporal e longevidade.
+- [Tratamento da Menopausa em Maceió](https://www.vivanceinstituto.com/menopausa-maceio): Acompanhamento médico no climatério e menopausa.
+- [Saúde Intestinal em Maceió](https://www.vivanceinstituto.com/saude-intestinal-maceio): Investigação e tratamento da disbiose e distúrbios gastrointestinais funcionais.
+- [Envelhecimento Saudável e Longevidade em Maceió](https://www.vivanceinstituto.com/envelhecimento-saudavel-maceio): Prevenção metabólica, preservação muscular e autonomia funcional.
+- [Medicina Integrativa em Maceió](https://www.vivanceinstituto.com/medicina-integrativa-maceio): Cuidado médico integral focado na causa raiz dos sintomas.
+- [Tratamento de Fibromialgia em Maceió](https://www.vivanceinstituto.com/tratamento-fibromialgia-maceio): Manejo clínico multimodal da dor crônica, fadiga e qualidade do sono.
+- [Bioimpedância em Maceió](https://www.vivanceinstituto.com/bioimpedancia-maceio): Exame de composição corporal de alta precisão.
+- [Calorimetria Indireta em Maceió](https://www.vivanceinstituto.com/calorimetria-indireta-maceio): Exame de taxa metabólica basal em repouso.
+- [Polissonografia Portátil em Maceió](https://www.vivanceinstituto.com/polissonografia-portatil-maceio): Diagnóstico domiciliar da qualidade do sono.
+- [Testes de Força em Maceió](https://www.vivanceinstituto.com/testes-de-forca-maceio): Avaliação de força muscular e prevenção de sarcopenia.
+- [Teste Genético para Emagrecimento](https://www.vivanceinstituto.com/teste-genetico-emagrecimento): Mapeamento nutrigenético e metabólico.
+- [Exame de Microbiota Intestinal em Maceió](https://www.vivanceinstituto.com/exame-microbiota-intestinal-maceio): Análise do microbioma intestinal.
+- [Mineralograma Capilar em Maceió](https://www.vivanceinstituto.com/exame-mineralograma-maceio): Avaliação de minerais e exposição a metais tóxicos.
+- [Teste de Intolerância Alimentar em Maceió](https://www.vivanceinstituto.com/teste-intolerancia-alimentar-maceio): Investigação de hipersensibilidades alimentares tardias.
+- [Tratamentos Injetáveis e Soroterapia em Maceió](https://www.vivanceinstituto.com/tratamentos-injetaveis-maceio): Reposição parenteral de nutrientes sob prescrição médica.
+- [Implantes Hormonais em Maceió](https://www.vivanceinstituto.com/implantes-hormonais-maceio): Terapia hormonal subdérmica individualizada mediante indicação clínica.
 
-## Redes Sociais e Links
-- [Instagram Dr. Danilo](https://www.instagram.com/dr.danilomarques/)
-- [Instagram Instituto Vivance](https://www.instagram.com/vivance.instituto/)
-- [YouTube](https://www.youtube.com/@dr.danilomarques)
-- [Página Inicial](https://www.vivanceinstituto.com/)
-- [Tratamento de Menopausa](https://www.vivanceinstituto.com/menopausa-maceio)
-- [Blog de Artigos](https://www.vivanceinstituto.com/blog.html)
+## Blog e Artigos Educativos
+- [Blog Médico do Instituto Vivance](https://www.vivanceinstituto.com/blog)
+- [Emagrecimento Definitivo em Maceió: Por que dietas restritivas falham?](https://www.vivanceinstituto.com/artigo-emagrecimento-maceio)
+- [O que a balança esconde: A importância da Bioimpedância](https://www.vivanceinstituto.com/artigo-bioimpedancia-maceio)
+- [Ozempic, Mounjaro e Emagrecimento: Como preservar massa muscular](https://www.vivanceinstituto.com/artigo-ozempic-maceio)
+- [Menopausa e Emagrecimento: Destravando o metabolismo feminino após os 40](https://www.vivanceinstituto.com/artigo-menopausa-emagrecimento)
+- [Soroterapia e Implantes Hormonais: Indicações clínicas e segurança](https://www.vivanceinstituto.com/artigo-soroterapia-implantes)

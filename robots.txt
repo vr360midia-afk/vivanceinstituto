@@ -1,26 +1,77 @@
-﻿User-agent: *
-Allow: /
+# ==========================================================================
+# ROBOTS.TXT - INSTITUTO VIVANCE (DR. DANILO MARQUES)
+# SEO Tradicional, SEO Local e Mecanismos de Busca / Resposta de IA (GEO/AEO)
+# ==========================================================================
 
-# Permitir explicitly bots de IA para GEO (Generative Engine Optimization)
-User-agent: ChatGPT-User
+User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
 
-User-agent: GPTBot
+# Mecanismos de Busca Tradicionais e IA do Google / Bing
+User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
 
-User-agent: PerplexityBot
+User-agent: Google-Extended
 Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
 
-User-agent: Googlebot
+# OpenAI (ChatGPT Search e GPT)
+User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
 
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
+
+# Anthropic (Claude Search e Claude)
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /privado/
+Disallow: /scratch_seo/
+
+# Sitemap Oficial
 Sitemap: https://www.vivanceinstituto.com/sitemap.xml
