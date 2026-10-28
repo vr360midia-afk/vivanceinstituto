@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Centralização do WhatsApp Personalizado por Serviço e Rastreamento (whatsapp_click)
+        // 7. Centralização do WhatsApp Personalizado por Serviço e Rastreamento (whatsapp_click)
     const VIVANCE_WA_NUMBER = '5582982120707';
     const VIVANCE_WA_BASE = 'https://wa.me/' + VIVANCE_WA_NUMBER;
     const VIVANCE_DEFAULT_MSG = 'Olá! Vim pelo site do Instituto Vivance e gostaria de agendar uma avaliação.';
@@ -285,17 +285,58 @@ document.addEventListener('DOMContentLoaded', () => {
         '/nutrologo-maceio': 'Nutrologia',
         '/medicina-integrativa-maceio': 'Medicina Integrativa',
         '/tratamento-fibromialgia-maceio': 'Tratamento de Fibromialgia',
-        '/tratamentos-injetaveis-maceio': 'Tratamentos Injetáveis',
+        '/tratamentos-injetaveis-maceio': 'Terapias Injetáveis',
         '/artigo-soroterapia-implantes': 'Implantes Hormonais e Tratamentos Injetáveis',
         '/testes-de-forca-maceio': 'Testes de Força',
         '/polissonografia-portatil-maceio': 'Polissonografia Portátil',
         '/calorimetria-indireta-maceio': 'Calorimetria Indireta',
-        '/exame-mineralograma-maceio': 'Mineralograma',
+        '/exame-mineralograma-maceio': 'Exame Mineralograma',
         '/teste-intolerancia-alimentar-maceio': 'Teste de Intolerância Alimentar',
         '/exame-microbiota-intestinal-maceio': 'Exame de Microbiota Intestinal',
-        '/teste-genetico-emagrecimento': 'Teste Genético',
+        '/teste-genetico-emagrecimento': 'Mapeamento Genético',
         '/implantes-hormonais-maceio': 'Implantes Hormonais'
     };
+
+    // Mapeamento de códigos técnicos neutros para Analytics (evita expor patologias/tratamentos na URL enviada ao GA4/Ads)
+    const PAGE_ANALYTICS_ID_MAP = {
+        '/': 'pg_home',
+        '/blog': 'pg_blog_index',
+        '/links': 'pg_links',
+        '/404': 'pg_404',
+        '/clinica-emagrecimento-maceio': 'pg_inst_01',
+        '/emagrecimento-maceio': 'pg_pil_01',
+        '/medico-para-emagrecer-maceio': 'pg_pil_02',
+        '/nutrologo-maceio': 'pg_pil_03',
+        '/tratamento-sobrepeso-maceio': 'pg_pil_04',
+        '/tratamento-obesidade-maceio': 'pg_srv_01',
+        '/menopausa-maceio': 'pg_srv_02',
+        '/saude-intestinal-maceio': 'pg_srv_03',
+        '/envelhecimento-saudavel-maceio': 'pg_srv_04',
+        '/medicina-integrativa-maceio': 'pg_srv_05',
+        '/tratamento-fibromialgia-maceio': 'pg_srv_06',
+        '/implantes-hormonais-maceio': 'pg_srv_07',
+        '/tratamentos-injetaveis-maceio': 'pg_srv_08',
+        '/bioimpedancia-maceio': 'pg_exm_01',
+        '/calorimetria-indireta-maceio': 'pg_exm_02',
+        '/polissonografia-portatil-maceio': 'pg_exm_03',
+        '/testes-de-forca-maceio': 'pg_exm_04',
+        '/teste-genetico-emagrecimento': 'pg_exm_05',
+        '/exame-microbiota-intestinal-maceio': 'pg_exm_06',
+        '/exame-mineralograma-maceio': 'pg_exm_07',
+        '/teste-intolerancia-alimentar-maceio': 'pg_exm_08',
+        '/artigo-emagrecimento-maceio': 'pg_art_01',
+        '/artigo-bioimpedancia-maceio': 'pg_art_02',
+        '/artigo-ozempic-maceio': 'pg_art_03',
+        '/artigo-menopausa-emagrecimento': 'pg_art_04',
+        '/artigo-soroterapia-implantes': 'pg_art_05'
+    };
+
+    const ALLOWED_SECTIONS = new Set([
+        'header', 'header_mobile', 'hero', 'servicos', 'metodologia',
+        'sobre', 'localizacao', 'faq', 'article_cta', 'blog_cta',
+        'main_content', 'content', 'footer', 'floating_button',
+        'links_primary', 'links_footer', 'geral'
+    ]);
 
     function normalizePagePath(rawPath) {
         if (!rawPath) return '/';
@@ -305,6 +346,11 @@ document.addEventListener('DOMContentLoaded', () => {
         p = p.replace(/\/+$/, '');
         if (p === '' || p === '/index') return '/';
         return p.startsWith('/') ? p : '/' + p;
+    }
+
+    function getNeutralPageCode(rawPath) {
+        const norm = normalizePagePath(rawPath);
+        return PAGE_ANALYTICS_ID_MAP[norm] || 'pg_other';
     }
 
     function encodeWhatsAppText(text) {
@@ -339,12 +385,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function detectSiteSection(el) {
         if (!el) return 'geral';
         const explicitSection = el.getAttribute('data-whatsapp-section');
-        if (explicitSection) return explicitSection;
+        if (explicitSection && ALLOWED_SECTIONS.has(explicitSection)) return explicitSection;
         if (el.classList.contains('floating-whatsapp')) return 'floating_button';
         if (el.closest('header, .header')) return 'header';
         if (el.closest('.hero, #inicio')) return 'hero';
         if (el.closest('#servicos')) return 'servicos';
-        if (el.closest('#metodologia')) return 'metodologia';
+        if (el.closest('#metodologia, #metodo')) return 'metodologia';
         if (el.closest('#sobre')) return 'sobre';
         if (el.closest('#localizacao')) return 'localizacao';
         if (el.closest('#faq, .faq-section')) return 'faq';
@@ -355,11 +401,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function detectButtonId(el, index) {
-        if (!el) return 'wa_btn_' + index;
-        const explicitId = el.getAttribute('data-whatsapp-id') || el.id;
-        if (explicitId) return explicitId;
-        if (el.classList.contains('floating-whatsapp')) return 'wa_floating';
         const section = detectSiteSection(el);
+        if (!el) return 'wa_' + section + '_' + (index + 1);
+        if (el.classList.contains('floating-whatsapp')) return 'wa_floating';
+        const explicitId = el.getAttribute('data-whatsapp-id');
+        // Garante que o ID técnico nunca contenha termos médicos sensíveis
+        if (explicitId && /^wa_(header|header_mobile|hero|localizacao|footer|floating|blog|links|clinica|404|art_0[1-5]|srv_0[1-8]|exm_0[1-8]|pil_0[1-4])(_[a-z0-9]+)?$/.test(explicitId)) {
+            return explicitId;
+        }
         return 'wa_' + section + '_' + (index + 1);
     }
 
@@ -368,15 +417,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof window.loadGA === 'function') {
                 window.loadGA();
             }
-            const originPage = normalizePagePath(window.location.pathname);
+            const safePageCode = getNeutralPageCode(window.location.pathname);
             const siteSection = detectSiteSection(el);
             const buttonId = detectButtonId(el, index);
 
-            // Parâmetros estritamente não sensíveis (sem enviar interesse médico, mensagem ou dados pessoais)
+            // Parâmetros estritamente técnicos e neutros (sem expor condição médica nem no path nem no título)
             const eventParams = {
-                origin_page: originPage,
+                origin_page: safePageCode,
                 button_id: buttonId,
-                site_section: siteSection
+                site_section: siteSection,
+                page_location: 'https://www.vivanceinstituto.com/' + safePageCode,
+                page_path: '/' + safePageCode,
+                page_title: 'Instituto Vivance - ' + safePageCode
             };
 
             window.dataLayer = window.dataLayer || [];
@@ -413,9 +465,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Expõe utilitário centralizado caso necessário em novos componentes
+    // Expõe utilitário centralizado
     window.VivanceWhatsApp = {
         getUrl: buildVivanceWhatsAppUrl,
-        getService: getVivanceServiceForElement
+        getService: getVivanceServiceForElement,
+        getNeutralPageCode: getNeutralPageCode
     };
 });

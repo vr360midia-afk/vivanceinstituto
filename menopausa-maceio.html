@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PFKQRWPG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1170,13 +1177,22 @@ a {
       "identifier": "CRM-AL 7564",
       "jobTitle": "Médico — Diretor Técnico do Instituto Vivance (CRM 7564 AL)",
       "medicalSpecialty": [
-        "Obesity",
-        "NutritionalScience",
+        "DietNutrition",
         "PreventiveMedicine"
       ],
       "worksFor": {
         "@id": "https://www.vivanceinstituto.com/#clinic"
       }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.vivanceinstituto.com/#website",
+      "url": "https://www.vivanceinstituto.com/",
+      "name": "Instituto Vivance",
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      },
+      "inLanguage": "pt-BR"
     },
     {
       "@type": "MedicalTherapy",
@@ -1201,11 +1217,8 @@ a {
       "about": {
         "@id": "https://www.vivanceinstituto.com/menopausa-maceio#service"
       },
-      "author": {
-        "@id": "https://www.vivanceinstituto.com/#physician"
-      },
-      "reviewedBy": {
-        "@id": "https://www.vivanceinstituto.com/#physician"
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
       }
     },
     {
@@ -1590,27 +1603,6 @@ a {
     </div>
 
     <script src="/script.js" defer=""></script>
-    <!-- Google Analytics Delayed (On Interaction) -->
-    <script>
-      let gaLoaded = false;
-      function loadGA() {
-          if(gaLoaded) return;
-          gaLoaded = true;
-          var gaScript = document.createElement('script');
-          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-B94KSDMKDJ";
-          gaScript.async = true;
-          document.body.appendChild(gaScript);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', 'G-B94KSDMKDJ');
-      }
-      window.addEventListener('scroll', loadGA, {once: true});
-      window.addEventListener('mousemove', loadGA, {once: true});
-      window.addEventListener('touchstart', loadGA, {once: true});
-      setTimeout(loadGA, 5000);
-    </script>
 
 
 

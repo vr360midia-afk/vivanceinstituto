@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PFKQRWPG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+    </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0" />
   <title>Dr. Danilo Marques | Links Oficiais, Instituto Vivance</title>
@@ -23,40 +30,55 @@
   <meta name="twitter:image" content="https://www.vivanceinstituto.com/foto-dr-danilo.webp" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["MedicalClinic", "MedicalOrganization"],
-        "@id": "https://www.vivanceinstituto.com/#clinic",
-        "name": "Instituto Vivance",
-        "url": "https://www.vivanceinstituto.com/",
-        "telephone": "+55-82-98212-0707",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
-          "addressLocality": "Maceió",
-          "addressRegion": "AL",
-          "postalCode": "57036-690",
-          "addressCountry": "BR"
-        }
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://www.vivanceinstituto.com/links#profilepage",
-        "url": "https://www.vivanceinstituto.com/links",
-        "name": "Dr. Danilo Marques | Links Oficiais, Instituto Vivance",
-        "mainEntity": {
-          "@type": "Physician",
-          "@id": "https://www.vivanceinstituto.com/#physician",
-          "name": "Dr. Danilo Marques",
-          "identifier": "CRM-AL 7564",
-          "worksFor": { "@id": "https://www.vivanceinstituto.com/#clinic" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "MedicalClinic",
+        "MedicalOrganization"
+      ],
+      "@id": "https://www.vivanceinstituto.com/#clinic",
+      "name": "Instituto Vivance",
+      "url": "https://www.vivanceinstituto.com/",
+      "telephone": "+55-82-98212-0707",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
+        "addressLocality": "Maceió",
+        "addressRegion": "AL",
+        "postalCode": "57036-690",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.vivanceinstituto.com/links#profilepage",
+      "url": "https://www.vivanceinstituto.com/links",
+      "name": "Dr. Danilo Marques | Links Oficiais, Instituto Vivance",
+      "mainEntity": {
+        "@type": "Physician",
+        "@id": "https://www.vivanceinstituto.com/#physician",
+        "name": "Dr. Danilo Marques",
+        "identifier": "CRM-AL 7564",
+        "worksFor": {
+          "@id": "https://www.vivanceinstituto.com/#clinic"
         }
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.vivanceinstituto.com/#website",
+      "url": "https://www.vivanceinstituto.com/",
+      "name": "Instituto Vivance",
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      },
+      "inLanguage": "pt-BR"
+    }
+  ]
+}
+    </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,9 +88,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B94KSDMKDJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', 'G-B94KSDMKDJ');
+    var safePg = (window.VivanceWhatsApp && window.VivanceWhatsApp.getNeutralPageCode) ? window.VivanceWhatsApp.getNeutralPageCode(window.location.pathname) : 'pg_site'; gtag('config', 'G-B94KSDMKDJ', { page_path: '/' + safePg, page_location: 'https://www.vivanceinstituto.com/' + safePg, page_title: 'Instituto Vivance - ' + safePg });
   </script>
 
   <style>

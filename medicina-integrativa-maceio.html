@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PFKQRWPG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,74 +35,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&display=swap">
 
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Danilo Marques",
-      "medicalSpecialty": ["Integrative Medicine", "Preventive Medicine", "Nutrology"],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "R. Olindina Campos Teixeira, 57 - Jatiúca",
-        "addressLocality": "Maceió",
-        "addressRegion": "AL",
-        "postalCode": "57036-690",
-        "addressCountry": "BR"
-      },
-      "telephone": "+55 82 98212-0707",
-      "worksFor": { "@type": "MedicalClinic", "name": "Instituto Vivance" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que é medicina integrativa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Medicina integrativa é uma abordagem que combina os recursos da medicina convencional (exames, diagnósticos, medicamentos) com uma visão ampla do paciente, como hábitos, alimentação, sono, estresse e estilo de vida, para tratar a causa dos problemas de saúde, e não apenas os sintomas."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Medicina integrativa substitui a medicina tradicional?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. A medicina integrativa não substitui a medicina convencional, ela a complementa, unindo exames e tratamentos baseados em evidência com estratégias de prevenção e qualidade de vida."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Para quem é indicada a medicina integrativa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "É indicada para quem busca entender a causa de sintomas persistentes, prevenir doenças crônicas, melhorar energia e qualidade de vida, ou complementar o tratamento de condições já diagnosticadas com uma abordagem mais completa."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quais exames são usados na medicina integrativa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Além dos exames convencionais, a avaliação pode incluir exames hormonais, metabólicos, nutricionais e inflamatórios mais detalhados, sempre definidos conforme o histórico e as queixas de cada paciente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto custa uma consulta de medicina integrativa em Maceió?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O valor varia conforme o tipo de atendimento. Entre em contato pelo WhatsApp do Instituto Vivance para valores atualizados."
-          }
-        }
-      ]
-    }
-    </script>
-
-<style>
+    <style>
 /* 
   Vivance Instituto - Landing Page Styles
   Palette:
@@ -1205,53 +1145,113 @@ a {
     }
 }
 </style>
-
-<style>
-details.faq-item {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--color-marble-gray);
-    padding-bottom: 1rem;
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.vivanceinstituto.com/#clinic",
+      "name": "Instituto Vivance",
+      "url": "https://www.vivanceinstituto.com/",
+      "telephone": "+55-82-98212-0707",
+      "priceRange": "$$",
+      "image": "https://www.vivanceinstituto.com/Vivance%20Instituto_Logomarca%20Dourada.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
+        "addressLocality": "Maceió",
+        "addressRegion": "AL",
+        "postalCode": "57036-690",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -9.660468,
+        "longitude": -35.708151
+      },
+      "medicalSpecialty": [
+        "DietNutrition",
+        "PreventiveMedicine"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.vivanceinstituto.com/#physician",
+      "name": "Dr. Danilo Marques",
+      "identifier": "CRM-AL 7564",
+      "jobTitle": "Médico — Diretor Técnico do Instituto Vivance (CRM 7564 AL)",
+      "medicalSpecialty": [
+        "DietNutrition",
+        "PreventiveMedicine"
+      ],
+      "worksFor": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.vivanceinstituto.com/#website",
+      "url": "https://www.vivanceinstituto.com/",
+      "name": "Instituto Vivance",
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "@id": "https://www.vivanceinstituto.com/medicina-integrativa-maceio#service",
+      "name": "Medicina Integrativa em Maceió",
+      "description": "Cuidado que une o melhor da medicina convencional com uma visão completa da sua saúde. Conheça a Medicina Integrativa com o Dr. Danilo Marques, em Maceió.",
+      "image": "https://www.vivanceinstituto.com/foto-dr-danilo.webp",
+      "provider": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      }
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://www.vivanceinstituto.com/medicina-integrativa-maceio#webpage",
+      "url": "https://www.vivanceinstituto.com/medicina-integrativa-maceio",
+      "name": "Medicina Integrativa em Maceió | Dr. Danilo Marques, Instituto Vivance",
+      "description": "Cuidado que une o melhor da medicina convencional com uma visão completa da sua saúde. Conheça a Medicina Integrativa com o Dr. Danilo Marques, em Maceió.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://www.vivanceinstituto.com/#website"
+      },
+      "about": {
+        "@id": "https://www.vivanceinstituto.com/medicina-integrativa-maceio#service"
+      },
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.vivanceinstituto.com/medicina-integrativa-maceio#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.vivanceinstituto.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Medicina Integrativa",
+          "item": "https://www.vivanceinstituto.com/medicina-integrativa-maceio"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.vivanceinstituto.com/medicina-integrativa-maceio#faq",
+      "mainEntity": []
+    }
+  ]
 }
-details.faq-item summary {
-    font-size: 1.25rem; 
-    font-family: var(--font-sans); 
-    color: var(--color-dark);
-    font-weight: 500;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.2s ease;
-}
-details.faq-item summary:hover {
-    color: var(--color-gold);
-}
-details.faq-item summary::-webkit-details-marker {
-    display: none;
-}
-details.faq-item summary::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: var(--color-gold);
-    font-weight: 300;
-}
-details.faq-item[open] summary::after {
-    content: '−';
-}
-details.faq-item p {
-    color: var(--color-dark-gray);
-    font-size: 1rem;
-    margin-top: 1rem;
-    line-height: 1.6;
-    animation: fadeInDown 0.3s ease-out;
-}
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-</style>
-
+    </script>
 </head>
 <body>
 <!-- Header -->
@@ -1578,27 +1578,6 @@ details.faq-item p {
     </div>
 
     <script src="/script.js" defer=""></script>
-    <!-- Google Analytics Delayed (On Interaction) -->
-    <script>
-      let gaLoaded = false;
-      function loadGA() {
-          if(gaLoaded) return;
-          gaLoaded = true;
-          var gaScript = document.createElement('script');
-          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-B94KSDMKDJ";
-          gaScript.async = true;
-          document.body.appendChild(gaScript);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', 'G-B94KSDMKDJ');
-      }
-      window.addEventListener('scroll', loadGA, {once: true});
-      window.addEventListener('mousemove', loadGA, {once: true});
-      window.addEventListener('touchstart', loadGA, {once: true});
-      setTimeout(loadGA, 5000);
-    </script>
 
 
 

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PFKQRWPG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,74 +35,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&display=swap">
 
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Danilo Marques",
-      "medicalSpecialty": ["Gastrointestinal Health", "Integrative Medicine", "Nutrology"],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "R. Olindina Campos Teixeira, 57 - Jatiúca",
-        "addressLocality": "Maceió",
-        "addressRegion": "AL",
-        "postalCode": "57036-690",
-        "addressCountry": "BR"
-      },
-      "telephone": "+55 82 98212-0707",
-      "worksFor": { "@type": "MedicalClinic", "name": "Instituto Vivance" }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que é disbiose intestinal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Disbiose é o desequilíbrio entre as bactérias boas e ruins do intestino. Pode causar inchaço, gases, alterações no funcionamento intestinal, cansaço e até impactar a imunidade e o humor."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quais sintomas indicam problema intestinal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Inchaço abdominal frequente, gases em excesso, intestino preso ou solto de forma recorrente, desconforto após as refeições e cansaço sem causa aparente são sinais comuns de que o intestino pode precisar de atenção."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Intestino desregulado afeta outras partes do corpo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. O intestino tem forte relação com a imunidade, o humor e o metabolismo. Um desequilíbrio intestinal persistente pode contribuir para inflamação, cansaço, alterações de peso e até oscilações de humor."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Como é feito o diagnóstico de problemas intestinais?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A avaliação começa com histórico detalhado dos sintomas e hábitos alimentares, podendo incluir exames específicos para investigar inflamação, intolerâncias ou desequilíbrio da microbiota, conforme o caso."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto custa uma consulta para saúde intestinal em Maceió?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O valor varia conforme o tipo de atendimento. Entre em contato pelo WhatsApp do Instituto Vivance para valores atualizados."
-          }
-        }
-      ]
-    }
-    </script>
-
-<style>
+    <style>
 /* 
   Vivance Instituto - Landing Page Styles
   Palette:
@@ -1205,53 +1145,113 @@ a {
     }
 }
 </style>
-
-<style>
-details.faq-item {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--color-marble-gray);
-    padding-bottom: 1rem;
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.vivanceinstituto.com/#clinic",
+      "name": "Instituto Vivance",
+      "url": "https://www.vivanceinstituto.com/",
+      "telephone": "+55-82-98212-0707",
+      "priceRange": "$$",
+      "image": "https://www.vivanceinstituto.com/Vivance%20Instituto_Logomarca%20Dourada.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
+        "addressLocality": "Maceió",
+        "addressRegion": "AL",
+        "postalCode": "57036-690",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -9.660468,
+        "longitude": -35.708151
+      },
+      "medicalSpecialty": [
+        "DietNutrition",
+        "PreventiveMedicine"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.vivanceinstituto.com/#physician",
+      "name": "Dr. Danilo Marques",
+      "identifier": "CRM-AL 7564",
+      "jobTitle": "Médico — Diretor Técnico do Instituto Vivance (CRM 7564 AL)",
+      "medicalSpecialty": [
+        "DietNutrition",
+        "PreventiveMedicine"
+      ],
+      "worksFor": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.vivanceinstituto.com/#website",
+      "url": "https://www.vivanceinstituto.com/",
+      "name": "Instituto Vivance",
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "@id": "https://www.vivanceinstituto.com/saude-intestinal-maceio#service",
+      "name": "Saúde Intestinal em Maceió",
+      "description": "Inchaço, gases, intestino preso ou solto demais? Cuide da sua saúde intestinal com acompanhamento especializado do Dr. Danilo Marques, em Maceió.",
+      "image": "https://www.vivanceinstituto.com/foto-dr-danilo.webp",
+      "provider": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      }
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://www.vivanceinstituto.com/saude-intestinal-maceio#webpage",
+      "url": "https://www.vivanceinstituto.com/saude-intestinal-maceio",
+      "name": "Saúde Intestinal em Maceió | Dr. Danilo Marques, Instituto Vivance",
+      "description": "Inchaço, gases, intestino preso ou solto demais? Cuide da sua saúde intestinal com acompanhamento especializado do Dr. Danilo Marques, em Maceió.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://www.vivanceinstituto.com/#website"
+      },
+      "about": {
+        "@id": "https://www.vivanceinstituto.com/saude-intestinal-maceio#service"
+      },
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.vivanceinstituto.com/saude-intestinal-maceio#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.vivanceinstituto.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Saúde Intestinal",
+          "item": "https://www.vivanceinstituto.com/saude-intestinal-maceio"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.vivanceinstituto.com/saude-intestinal-maceio#faq",
+      "mainEntity": []
+    }
+  ]
 }
-details.faq-item summary {
-    font-size: 1.25rem; 
-    font-family: var(--font-sans); 
-    color: var(--color-dark);
-    font-weight: 500;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.2s ease;
-}
-details.faq-item summary:hover {
-    color: var(--color-gold);
-}
-details.faq-item summary::-webkit-details-marker {
-    display: none;
-}
-details.faq-item summary::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: var(--color-gold);
-    font-weight: 300;
-}
-details.faq-item[open] summary::after {
-    content: '−';
-}
-details.faq-item p {
-    color: var(--color-dark-gray);
-    font-size: 1rem;
-    margin-top: 1rem;
-    line-height: 1.6;
-    animation: fadeInDown 0.3s ease-out;
-}
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-</style>
-
+    </script>
 </head>
 <body>
 <!-- Header -->
@@ -1578,27 +1578,6 @@ details.faq-item p {
     </div>
 
     <script src="/script.js" defer=""></script>
-    <!-- Google Analytics Delayed (On Interaction) -->
-    <script>
-      let gaLoaded = false;
-      function loadGA() {
-          if(gaLoaded) return;
-          gaLoaded = true;
-          var gaScript = document.createElement('script');
-          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-B94KSDMKDJ";
-          gaScript.async = true;
-          document.body.appendChild(gaScript);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', 'G-B94KSDMKDJ');
-      }
-      window.addEventListener('scroll', loadGA, {once: true});
-      window.addEventListener('mousemove', loadGA, {once: true});
-      window.addEventListener('touchstart', loadGA, {once: true});
-      setTimeout(loadGA, 5000);
-    </script>
 
 
 
