@@ -1158,11 +1158,7 @@ a {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": [
-        "MedicalClinic",
-        "MedicalOrganization",
-        "LocalBusiness"
-      ],
+      "@type": "MedicalClinic",
       "@id": "https://www.vivanceinstituto.com/#clinic",
       "name": "Instituto Vivance",
       "url": "https://www.vivanceinstituto.com/",
@@ -1172,7 +1168,7 @@ a {
       "telephone": "+55-82-98212-0707",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Olindina Campos Teixeira, 57",
+        "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
         "addressLocality": "Maceió",
         "addressRegion": "AL",
         "postalCode": "57036-690",
@@ -1191,10 +1187,7 @@ a {
           "name": "Alagoas"
         }
       },
-      "medicalSpecialty": [
-        "DietNutrition",
-        "PreventiveMedicine"
-      ],
+      "medicalSpecialty": "DietNutrition",
       "availableService": [
         {
           "@type": "MedicalTherapy",
@@ -1251,16 +1244,17 @@ a {
         "https://www.instagram.com/vivance.instituto/",
         "https://www.instagram.com/dr.danilomarques/",
         "https://www.youtube.com/@dr.danilomarques"
-      ]
+      ],
+      "priceRange": "$$$"
     },
     {
-      "@type": "Physician",
+      "@type": "Person",
       "@id": "https://www.vivanceinstituto.com/#physician",
       "name": "Dr. Danilo Marques",
+      "jobTitle": "Médico — Diretor Técnico do Instituto Vivance (CRM 7564 AL)",
+      "description": "Médico em Maceió (CRM-AL 7564) com atuação em emagrecimento, nutrologia, metabolismo e longevidade no Instituto Vivance.",
       "url": "https://www.vivanceinstituto.com/",
       "image": "https://www.vivanceinstituto.com/foto-dr-danilo.webp",
-      "description": "Médico em Maceió (CRM-AL 7564) com atuação em emagrecimento, nutrologia, metabolismo e longevidade no Instituto Vivance.",
-      "telephone": "+55-82-98212-0707",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "CRM",
@@ -1268,14 +1262,6 @@ a {
       },
       "worksFor": {
         "@id": "https://www.vivanceinstituto.com/#clinic"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
-        "addressLocality": "Maceió",
-        "addressRegion": "AL",
-        "postalCode": "57036-690",
-        "addressCountry": "BR"
       },
       "sameAs": [
         "https://www.instagram.com/dr.danilomarques/",
@@ -1296,11 +1282,14 @@ a {
       "@type": "MedicalWebPage",
       "@id": "https://www.vivanceinstituto.com/#webpage",
       "url": "https://www.vivanceinstituto.com/",
-      "name": "Emagrecimento e Tratamento da Obesidade em Maceió | Instituto Vivance",
+      "name": "Instituto Vivance | Dr. Danilo Marques — Emagrecimento, Nutrologia e Longevidade em Maceió",
       "description": "Dificuldade para emagrecer? Descubra o tratamento clínico da obesidade no Instituto Vivance, em Maceió (Jatiúca). Avaliação metabólica completa com o Dr. Danilo Marques.",
       "inLanguage": "pt-BR",
       "isPartOf": {
         "@id": "https://www.vivanceinstituto.com/#website"
+      },
+      "publisher": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
       },
       "about": {
         "@id": "https://www.vivanceinstituto.com/#clinic"

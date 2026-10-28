@@ -34,14 +34,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": [
-        "MedicalClinic",
-        "MedicalOrganization"
-      ],
+      "@type": "MedicalClinic",
       "@id": "https://www.vivanceinstituto.com/#clinic",
       "name": "Instituto Vivance",
       "url": "https://www.vivanceinstituto.com/",
+      "logo": "https://www.vivanceinstituto.com/Vivance%20Instituto_Logomarca%20Dourada.png",
+      "image": "https://www.vivanceinstituto.com/fachada-instituto-vivance-maceio.webp",
       "telephone": "+55-82-98212-0707",
+      "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
@@ -49,22 +49,39 @@
         "addressRegion": "AL",
         "postalCode": "57036-690",
         "addressCountry": "BR"
-      }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -9.660468,
+        "longitude": -35.708151
+      },
+      "medicalSpecialty": "DietNutrition",
+      "sameAs": [
+        "https://www.instagram.com/vivance.instituto/",
+        "https://www.instagram.com/dr.danilomarques/",
+        "https://www.youtube.com/@dr.danilomarques"
+      ]
     },
     {
-      "@type": "ProfilePage",
-      "@id": "https://www.vivanceinstituto.com/links#profilepage",
-      "url": "https://www.vivanceinstituto.com/links",
-      "name": "Dr. Danilo Marques | Links Oficiais, Instituto Vivance",
-      "mainEntity": {
-        "@type": "Physician",
-        "@id": "https://www.vivanceinstituto.com/#physician",
-        "name": "Dr. Danilo Marques",
-        "identifier": "CRM-AL 7564",
-        "worksFor": {
-          "@id": "https://www.vivanceinstituto.com/#clinic"
-        }
-      }
+      "@type": "Person",
+      "@id": "https://www.vivanceinstituto.com/#physician",
+      "name": "Dr. Danilo Marques",
+      "jobTitle": "Médico — Diretor Técnico do Instituto Vivance (CRM 7564 AL)",
+      "description": "Médico em Maceió (CRM-AL 7564) com atuação em emagrecimento, nutrologia, metabolismo e longevidade no Instituto Vivance.",
+      "url": "https://www.vivanceinstituto.com/",
+      "image": "https://www.vivanceinstituto.com/foto-dr-danilo.webp",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "CRM",
+        "value": "CRM-AL 7564"
+      },
+      "worksFor": {
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      },
+      "sameAs": [
+        "https://www.instagram.com/dr.danilomarques/",
+        "https://www.youtube.com/@dr.danilomarques"
+      ]
     },
     {
       "@type": "WebSite",
@@ -75,6 +92,18 @@
         "@id": "https://www.vivanceinstituto.com/#clinic"
       },
       "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.vivanceinstituto.com/links#profilepage",
+      "url": "https://www.vivanceinstituto.com/links",
+      "name": "Dr. Danilo Marques | Links Oficiais, Instituto Vivance",
+      "isPartOf": {
+        "@id": "https://www.vivanceinstituto.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.vivanceinstituto.com/#physician"
+      }
     }
   ]
 }
@@ -83,15 +112,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B94KSDMKDJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
-    gtag('js', new Date());
-    var safePg = (window.VivanceWhatsApp && window.VivanceWhatsApp.getNeutralPageCode) ? window.VivanceWhatsApp.getNeutralPageCode(window.location.pathname) : 'pg_site'; gtag('config', 'G-B94KSDMKDJ', { page_path: '/' + safePg, page_location: 'https://www.vivanceinstituto.com/' + safePg, page_title: 'Instituto Vivance - ' + safePg });
-  </script>
 
   <style>
     :root {

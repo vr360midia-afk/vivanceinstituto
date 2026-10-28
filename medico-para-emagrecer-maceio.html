@@ -187,28 +187,53 @@
   "@graph": [
     {
       "@type": "MedicalClinic",
-      "@id": "https://www.vivanceinstituto.com/#organization",
+      "@id": "https://www.vivanceinstituto.com/#clinic",
       "name": "Instituto Vivance",
       "url": "https://www.vivanceinstituto.com/",
       "logo": "https://www.vivanceinstituto.com/Vivance%20Instituto_Logomarca%20Dourada.png",
       "telephone": "+55-82-98212-0707",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Olindina Campos Teixeira, 57",
+        "streetAddress": "Rua Olindina Campos Teixeira, 57, Jatiúca",
         "addressLocality": "Maceió",
         "addressRegion": "AL",
         "postalCode": "57036-690",
         "addressCountry": "BR"
-      }
+      },
+      "image": "https://www.vivanceinstituto.com/fachada-instituto-vivance-maceio.webp",
+      "priceRange": "$$$",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -9.660468,
+        "longitude": -35.708151
+      },
+      "medicalSpecialty": "DietNutrition",
+      "sameAs": [
+        "https://www.instagram.com/vivance.instituto/",
+        "https://www.instagram.com/dr.danilomarques/",
+        "https://www.youtube.com/@dr.danilomarques"
+      ]
     },
     {
-      "@type": "Physician",
+      "@type": "Person",
       "@id": "https://www.vivanceinstituto.com/#physician",
       "name": "Dr. Danilo Marques",
+      "jobTitle": "Médico — Diretor Técnico do Instituto Vivance (CRM 7564 AL)",
+      "description": "Médico em Maceió (CRM-AL 7564) com atuação em emagrecimento, nutrologia, metabolismo e longevidade no Instituto Vivance.",
       "url": "https://www.vivanceinstituto.com/",
+      "image": "https://www.vivanceinstituto.com/foto-dr-danilo.webp",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "CRM",
+        "value": "CRM-AL 7564"
+      },
       "worksFor": {
-        "@id": "https://www.vivanceinstituto.com/#organization"
-      }
+        "@id": "https://www.vivanceinstituto.com/#clinic"
+      },
+      "sameAs": [
+        "https://www.instagram.com/dr.danilomarques/",
+        "https://www.youtube.com/@dr.danilomarques"
+      ]
     },
     {
       "@type": "WebSite",
